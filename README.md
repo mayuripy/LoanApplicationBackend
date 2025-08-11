@@ -1,4 +1,52 @@
 # 🏦 Home Loan Finance Backend
+
+![Java](https://img.shields.io/badge/Java-17-orange?logo=java&logoColor=white)
+![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.x-brightgreen?logo=springboot&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-8.0-blue?logo=mysql&logoColor=white)
+![License](https://img.shields.io/badge/License-MIT-yellow)
+
+This is the **backend API** for the **Home Loan Finance Management System** built with **Spring Boot**.  
+It provides RESTful services for managing **loan applications**, **customer profiles**, **disbursements**, **sanction letters**, **document verification**, and **user authentication**.
+
+---
+
+## 🔗 Repositories
+- **[Frontend Repo – Loan Management System Frontend](https://github.com/mayurichaudhari/Loan-Management-System-Frontend)**
+- **[Backend Repo – Home Loan Finance Backend](https://github.com/mayurichaudhari/Home_Loan_Finance_Backend)**
+
+---
+
+## 🚀 Features
+- 🛡 **User Authentication & Role-based Authorization**
+- 🏦 **Loan Application Management** (Apply, View, Update Status)
+- 📄 **Document Upload and Verification**
+- 💰 **Disbursement Management & History**
+- 📋 **Sanction Letter Generation and Viewing**
+- 📊 **Credit Evaluation and Loan Stage History Tracking**
+
+---
+
+## 🧑‍💻 Technologies Used
+- **Java 17+ / Spring Boot**
+- **Spring Security (JWT)**
+- **Hibernate / JPA**
+- **Maven**
+- **MySQL**
+- **RESTful APIs**
+
+---
+
+## 📂 Project Structure
+Mayuri Chaudhari
+📧 mayurichaudhari@email.com
+💼 Java | Spring Boot | MySQL | REST APIs
+🌐 GitHub ProfileMayuri Chaudhari
+📧 mayurichaudhari@email.com
+💼 Java | Spring Boot | MySQL | REST APIs
+🌐 GitHub Profile
+
+git clone https://github.com/mayurichaudhari/Home_Loan_Finance_Backend.git
+cd Home_Loan_Finance_Backend# 🏦 Home Loan Finance Backend
 This is the backend API for the Home Loan Finance Management System built with Spring Boot. It provides RESTful services for managing loan applications, customer profiles, disbursements, sanction letters, document verification, and user authentication.
 
 ## 🔗 Repository
