@@ -1,88 +1,44 @@
 # 🏦 Home Loan Finance Backend
 
-![Java](https://img.shields.io/badge/Java-17-orange?logo=java&logoColor=white)
-![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.x-brightgreen?logo=springboot&logoColor=white)
-![MySQL](https://img.shields.io/badge/MySQL-8.0-blue?logo=mysql&logoColor=white)
-![License](https://img.shields.io/badge/License-MIT-yellow)
+**Java Spring Boot • MySQL • REST APIs**
 
-This is the **backend API** for the **Home Loan Finance Management System** built with **Spring Boot**.  
-It provides RESTful services for managing **loan applications**, **customer profiles**, **disbursements**, **sanction letters**, **document verification**, and **user authentication**.
+This is the backend API for the **Home Loan Finance Management System** built with Spring Boot. It provides RESTful services for managing loan applications, customer profiles, disbursements, sanction letters, document verification, and user authentication.
 
 ---
 
 ## 🔗 Repositories
-- **[Frontend Repo – Loan Management System Frontend](https://github.com/mayurichaudhari/Loan-Management-System-Frontend)**
-- **[Backend Repo – Home Loan Finance Backend](https://github.com/mayurichaudhari/Home_Loan_Finance_Backend)**
+
+* **Backend Repo** – [https://github.com/mayuripy/LoanApplicationBackend](https://github.com/mayuripy/LoanApplicationBackend)
+* **Frontend Repo** – *Loan Management System Frontend (clone and run separately)*
 
 ---
 
 ## 🚀 Features
-- 🛡 **User Authentication & Role-based Authorization**
-- 🏦 **Loan Application Management** (Apply, View, Update Status)
-- 📄 **Document Upload and Verification**
-- 💰 **Disbursement Management & History**
-- 📋 **Sanction Letter Generation and Viewing**
-- 📊 **Credit Evaluation and Loan Stage History Tracking**
+
+* 🛡️ **User Authentication & Role-based Authorization** (JWT + Spring Security)
+* 🏦 **Loan Application Management** (Apply, View, Update Status)
+* 📄 **Document Upload & Verification**
+* 💰 **Disbursement Management & History**
+* 📋 **Sanction Letter Generation & Viewing**
+* 📊 **Credit Evaluation & Loan Stage History Tracking**
 
 ---
 
 ## 🧑‍💻 Technologies Used
-- **Java 17+ / Spring Boot**
-- **Spring Security (JWT)**
-- **Hibernate / JPA**
-- **Maven**
-- **MySQL**
-- **RESTful APIs**
+
+* Java 17+
+* Spring Boot
+* Spring Security (JWT)
+* Hibernate / JPA
+* Maven
+* MySQL
+* RESTful APIs
 
 ---
-
-## 📂 Project Structure
-Mayuri Chaudhari
-📧 mayurichaudhari@email.com
-💼 Java | Spring Boot | MySQL | REST APIs
-🌐 GitHub ProfileMayuri Chaudhari
-📧 mayurichaudhari@email.com
-💼 Java | Spring Boot | MySQL | REST APIs
-🌐 GitHub Profile
-
-git clone https://github.com/mayurichaudhari/Home_Loan_Finance_Backend.git
-cd Home_Loan_Finance_Backend# 🏦 Home Loan Finance Backend
-This is the backend API for the Home Loan Finance Management System built with Spring Boot. It provides RESTful services for managing loan applications, customer profiles, disbursements, sanction letters, document verification, and user authentication.
-
-## 🔗 Repository
-
-> 🔗 **Frontend Repo**: [Loan Management System Frontend](https://github.com/spuffyffets/loan-management-system.git)
-> 🔗 **Backend Repo**: [Home_loan_Finance Backend](https://github.com/spuffyffets/Home_loan_Finance.git)  
-
----
-
-## 🚀 Features
-- 🛡️ **User Authentication & Role-based Authorization**
-
-- 🏦 **Loan Application Management (Apply, View, Update Status)**
-
-- 📄 **Document Upload and Verification**
-
-- 💰 **Disbursement Management & History**
-
-- 📋 **Sanction Letter Generation and Viewing**
-
-- 📊 **Credit Evaluation and Loan Stage History Tracking**
-
----
-
-## 🧑‍💻 Technologies Used
-- Java 17+ / Spring Boot
-- Spring Security (JWT)
-- Hibernate / JPA
-- Maven
-- MySQL
-- RESTful APIs
 
 ## 📂 Project Structure (Backend)
 
-```bash
-
+```
 Home_loan_Finance/
  ├── mvnw, mvnw.cmd          # Maven wrapper scripts
  ├── pom.xml                 # Maven project descriptor
@@ -93,7 +49,7 @@ Home_loan_Finance/
  │   │   │       └── sit/
  │   │   │           └── homeloan/
  │   │   │               ├── HomeLoanFinanceApplication.java      # Main Spring Boot app
- │   │   │               ├── config/                             # Configuration classes (e.g., WebConfig)
+ │   │   │               ├── config/                             # Configuration classes (e.g., WebConfig, SecurityConfig)
  │   │   │               ├── controller/                         # REST controllers
  │   │   │               ├── dto/                                # Data Transfer Objects
  │   │   │               ├── enums/                              # Enum definitions (roles, statuses, document types)
@@ -107,69 +63,72 @@ Home_loan_Finance/
  └── .mvn/
      └── wrapper/
          └── maven-wrapper.properties                            # Maven wrapper config
-
 ```
+
+---
+
 ## 🔧 Setup Instructions
 
 ### ✅ Prerequisites
 
--Java JDK 17 or above
--Maven 3.6+
--MySQL Server running
--IDE (IntelliJ, Eclipse, VS Code) recommended
+* Java JDK 17 or above
+* Maven 3.6+
+* MySQL Server running
+* IDE (IntelliJ, Eclipse, VS Code) recommended
 
-### 🛠️ Installation & Running Backend
+### 🛠 Installation & Running Backend
 
 ```bash
-git clone https://github.com/spuffyffets/Inventory-Management-System.git
-cd Inventory-Management-System
+# clone backend
+git clone https://github.com/mayuripy/LoanApplicationBackend.git
+cd LoanApplicationBackend
+
+# open the project in your IDE
+# configure DB in src/main/resources/application.properties
 ```
 
-- Open the project in your favorite IDE (Eclipse, IntelliJ, VSCode).
-- Configure the MySQL database connection in src/main/resources/application.properties:
-```bash
+Add or update the following properties in `src/main/resources/application.properties`:
+
+```properties
 spring.jpa.hibernate.ddl-auto=update
 spring.datasource.url=jdbc:mysql://localhost:3306/home_loan?createDatabaseIfNotExist=true
 spring.datasource.username=YourUserName
 spring.datasource.password=YourPassword
 spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
-spring.jpa.show-sql: true
+spring.jpa.show-sql=true
 ```
-- Make sure the database home_loan exists. If not, create it:
-```bash
+
+Make sure the database `home_loan` exists. If not, create it:
+
+```sql
 CREATE DATABASE home_loan;
 ```
 
-## 🔗 Frontend Repo
-- Make sure to clone and run the frontend application separately for the full system:
+Then build and run the application:
 
-🔗 **Frontend Repo**: [Loan Management System Frontend](https://github.com/spuffyffets/loan-management-system.git)
+```bash
+mvn clean install
+mvn spring-boot:run
+```
 
+The backend should be available at `http://localhost:8080` (default). Configure the frontend to point to this backend for full system functionality.
+
+---
+
+## 📌 Notes & Tips
+
+* Use Postman or Insomnia to test REST endpoints locally.
+* Keep sensitive values (DB credentials, JWT secret) out of source control. Consider using environment variables or Spring `application-{profile}.properties`.
+* Add unit and integration tests for critical services (authentication, loan lifecycle, document verification).
+
+---
 
 ## ✍️ Author
 
-Suchit Chaudhari
-📧 suchitchaudhari17@gmail.com
+Mayuri Chaudhari — **[chaudharimayuri2004@gmail.com](mailto:chaudharimayuri2004@gmail.com)**
 
+---
 
+## 📜 License
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+This project is released under the MIT License. Feel free to update the license file as required.
